@@ -1,6 +1,6 @@
 <table>
   <tr>
-     <td valign="top">
+    <td valign="top">
       <ul>
         <li>
           <a href="/kanbas/Profile/">Account</a>
@@ -31,7 +31,7 @@
         </li>
       </ul>
     </td>
-     <td valign="top">
+    <td valign="top">
       <ul>
         <li>
           <a href="/kanbas/Courses/Home/">Home</a>
@@ -89,100 +89,75 @@
         </li>
       </ul>
     </td>
-     <td valign="top">
+    <td valign="top">
       <select>
         <option value="SG">SpeedGrader</option>
       </select>
       <h1>Assignment Name</h1>
-      <input type="text" value="A1 - ENV + HTML" /> <br />
-      <textarea>This is the assignment description. </textarea> <br />
+      <input type="text" value="A1 - ENV + HTML" /> <br /><br />
+      <textarea>This is the assignment description. </textarea> <br /><br />
 
       <label for="points">Points</label> <br />
-      <input id="points" type="number" value="100" /> <br />
+      <input id="points" type="number" value="100" /> <br /><br />
+
       <label for="assignmentGroup">Assignment Group</label> <br />
       <select id="assignmentGroup">
         <option value="ASSIGNMENTS">ASSIGNMENTS</option>
-      </select><br />
+      </select><br /><br />
+
       <label for='displayGrade'> Display Grade as </label><br />
       <select id="displayGrade">
         <option value="Percentage">Percentage</option>
-      </select><br />
-      <label for="submission">Submission Type</label><br/>
+      </select><br /><br />
+
+      <label for="submission">Submission Type</label><br />
       <select id="submission">
         <option value="Online">Online</option>
-      </select><br/>
-<label for="onlineOptions">Online Entry Options</label><br/>
-<div id="onlineOptions">
-        <input
-        type="checkbox"
-        id="textEntry"
-        name="textEntry"
-        value="Text Entry"
-      />
-      <label for="textEntry">Text Entry</label><br />
-      <input type="checkbox" id="webURL" name="webURL" value="Website URL" />
-      <label for="webURL"> Website URL</label><br />
-      <input
-        type="checkbox"
-        id="mediaRecordings"
-        name="mediaRecordings"
-        value="Media Recordings"
-      />
-      <label for="mediaRecordings"> Media Recordings</label><br />
-      <input
-        type="checkbox"
-        id="studentAnnotations"
-        name="studentAnnotations"
-        value="Student Annotations"
-      />
-      <label for="studentAnnotations"> Student Annotations</label><br />
-      <input
-        type="checkbox"
-        id="fileUploads"
-        name="fileUploads"
-        value="File Uploads"
-      />
-      <label for="fileUploads">File Uploads</label><br />
-    </div>
-     <label for="subAttempt"><br/>
-      <select id="subAttempt"> 
+      </select><br /><br />
+      <label for="onlineOptions">Online Entry Options</label><br />
+      <div id="onlineOptions">
+        <input type="checkbox" id="textEntry" name="textEntry" value="Text Entry" />
+        <label for="textEntry">Text Entry</label><br />
+        <input type="checkbox" id="webURL" name="webURL" value="Website URL" />
+        <label for="webURL"> Website URL</label><br />
+        <input type="checkbox" id="mediaRecordings" name="mediaRecordings" value="Media Recordings" />
+        <label for="mediaRecordings"> Media Recordings</label><br />
+        <input type="checkbox" id="studentAnnotations" name="studentAnnotations" value="Student Annotations" />
+        <label for="studentAnnotations"> Student Annotations</label><br />
+        <input type="checkbox" id="fileUploads" name="fileUploads" value="File Uploads" />
+        <label for="fileUploads">File Uploads</label><br />
+      </div><br />
+      <label for="subAttempt">Submission Attempts</label><br />
+      <select id="subAttempt">
         <option value="Unlimited">Unlimited</option>
-      </select><br/>
-<label for="plagiarism"><br/>      
-  <select id="plagiarism">
+      </select><br /><br />
+      <label for="plagiarism">Plagiarism Review</label><br />
+      <select id="plagiarism">
         <option value="None">None</option>
-      </select>
-      <p>Group Assignment</p>
-      <input
-        type="checkbox"
-        id="groupAssignment"
-        name="groupAssignment"
-        value="Group Assignment"
-      />
-      <label for="groupAssignment">This is a group assignment</label>
-      <p>Peer Reviews</p>
-      <input
-        type="checkbox"
-        id="peerReviewReq"
-        name="peerReviewReq"
-        value="Peer Review Required"
-      />
-      <label for="peerReviewReq">Require Peer Review</label>
+      </select><br /><br />
+      <label for="groupAssignment">Group Assignment</label><br />
+      <input type="checkbox" id="groupAssignment" name="groupAssignment" value="Group Assignment" />
+      <label for="groupAssignment">This is a group assignment</label><br /><br />
 
-      <p>Assign To</p>
-      <input type="text" value="Everyone" />
-      <p>Due</p>
-      <input type="date" />
-      <p>Available From</p>
-      <input type="date" />
-      <p>Until</p>
-      <input type="date" />
+      <label for="peerReviewReq">Peer Reviews</label><br />
+      <input type="checkbox" id="peerReviewReq" name="peerReviewReq" value="Peer Review Required" />
+      <label for="peerReviewReq">Require Peer Review</label><br /><br />
+
+      <label for="assignTo">Assign To</label><br/>
+      <input type="text" id="assignTo" name="assignTo" value="Everyone" /><br /><br />
+
+      <label for="due">Due</label><br/>
+      <input type="date" id="due" name="due" /><br/><br/>
+
+      <label for="availFrom">Available From</label><br/>
+      <input type="date" id="availFrom" name="availFrom" placeholder="2021-01-01" /><br/><br/>
+      <label for="availUntil">Until</label><br/>
+      <input type="date" id="availUntil" name="availUntil" placeholder="2021-01-01" /><br/><br/>
 
       <form action="/kanbas/Courses/Assignments/index.html">
         <button>Cancel</button>
         <button>Save</button>
       </form>
-     
     </td>
   </tr>
 </table>

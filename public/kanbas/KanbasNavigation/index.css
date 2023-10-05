@@ -1,0 +1,29 @@
+
+ul.sidebar .list-group-item {
+  border-radius: 0;
+    list-style-type: none;
+    border: none;
+    background-color: black;
+    text-align: center;
+    width: 85px;
+   padding-left: 5px;
+   padding-right: 5px;
+
+}
+  
+  ul.sidebar .list-group-item.active {
+    background-color: white;
+    border: none;
+  }
+  
+  ul.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  ul.sidebar .list-group-item.active a {
+    color: red;
+    text-decoration: none;
+  }
+  

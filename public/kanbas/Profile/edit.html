@@ -1,116 +1,206 @@
-<table>
-  <tr>
-     <td valign="top">
-      <ul>
-        <li>
-          <a href="/kanbas/Profile/">Account</a>
-        </li>
-        <li>
-          <a href="#">Dashboard</a>
-        </li>
-        <li>
-          <a href="/kanbas/Courses/Home/">Courses</a>
-        </li>
-        <li>
-          <a href="#">Calendar</a>
-        </li>
-        <li>
-          <a href="#">Inbox</a>
-        </li>
-        <li>
-          <a href="#">History</a>
-        </li>
-        <li>
-          <a href="#">Studio</a>
-        </li>
-        <li>
-          <a href="#">Commons</a>
-        </li>
-        <li>
-          <a href="#">Help</a>
-        </li>
-      </ul>
-    </td>
-     <td valign="top">
-      <ul>
-        <li>
-          <a href="#">Notifications</a>
-        </li>
-        <li>
-          <a href="/kanbas/Profile/index.html">Profile</a>
-        </li>
-        <li>
-          <a href="#">Files</a>
-        </li>
-        <li>
-          <a href="#">Settings</a>
-        </li>
-        <li>
-          <a href="#">ePortfolios</a>
-        </li>
-        <li>
-          <a href="#">Shared Content</a>
-        </li>
-        <li>
-          <a href="#">The Hub</a>
-        </li>
-        <li>
-          <a href="#">Quickly Course Tools</a>
-        </li>
-        <li>
-          <a href="#">Global Announcements</a>
-        </li>
-      </ul>
-    </td>
-     <td valign="top">
-      <h1>Jose Annunziato</h1>
-      <label for="firstName">First Name:</label>
-      <input
-        type="text"
-        id="firstName"
-        name="firstName"
-        value="Jose Annunziato"
-      />
-      <label for="pronouns">Pronouns:</label>
-      <select id="pronouns" name="pronouns">
-        <option value="None">None</option></select
-      ><br />
-      <label for="title">Title:</label>
-      <input type="text" id="title" name="title" />
-      <h2>Contact</h2>
-      <p>No registered services, you can add some on the settings page.</p>
-      <h2>Contact</h2>
-      <p>No registered service, you can add some on the settings page.</p>
-      <h2>Biography</h2>
-      <p>Faculty, Software Engineer, AI, Space, and renewables enthusiast.</p>
-      <textarea>
- Faculty, Software Engineer, AI, Space, and renewables enthusiast. </textarea
-      >
-      <h2>Links</h2>
-      <ul>
-        YouTube
-      </ul>
-      <table>
-        <tr>
-          <th>Title</th>
-          <th></th>
-          <th>URL</th>
-          <th></th>
-        </tr>
-        <tr>
-           <td valign="top"><input type="text" value="YouTube" /></td>
-           <td valign="top">-></td>
-           <td valign="top"><input type="text" value="www.youtube.com" /></td>
-           <td valign="top"><a href="#">Remove</a></td>
-        </tr>
-      </table>
-      <button>Add another link</button><br />
-      <button>Cancel</button>
-      <form action="/kanbas/Profile/index.html">
-        <button>Save Profile</button><br />
-        <button>Edit Profile</button>
-        <button>Cancel Editing</button>
-      </form>
-    </td>
-  </tr>
-</table>
+<html>
+
+<head>
+  <link href="../../kanbas/Courses/Home/index.css" rel="stylesheet" />
+  <link href="../KanbasNavigation/index.css" rel="stylesheet" />
+  <link href="index.css" rel="stylesheet" />
+  <link href="../../kanbas/Courses/CourseNavigation/index.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <link href="/../vendors/fontawesome/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div class="kb-flex-col-container">
+    <div class="kb-flex-row-container d-block d-sm-block d-lg-none bg-dark align-items-center">
+      <div class="kb-flex-row-container justify-content-between mobile-bar align-items-center">
+        <a class="links"  href="/kanbas/MobileViews/kbNavMobile.html">
+          <i class="fa fa-bars ms-4 d-inline " style="color: white" aria-hidden="true"></i>
+        </a>
+        <div class="title-text d-inline m-4"> CS4550.12631.202410</div>
+        <a class="links"  href="/kanbas/MobileViews/courseNavMobile.html">
+          <i class="fas fa-chevron-down me-4 d-inline" style="color: white"></i>
+        </a>
+      </div>
+    </div>
+    <div class="kb-flex-row-container">
+      <div class="kb-width-85px d-none d-lg-block">
+        <ul class="sidebar list-group position-sticky">
+          <li class="list-group-item active">
+            <i class="fa fa-stack fa-user" style="color: lightgray"></i>
+            <a class="links"  class="links" class href="/kanbas/Profile/">Account</a>
+          </li>
+          <li class="list-group-item">
+            <i class="fas fa-stack fa-tachometer-alt" style="color: red"></i>
+            <a class="links"  class="links" href="#">Dashboard</a>
+          </li>
+          <li class="list-group-item">
+            <i class="fas fa-stack fa-book " style="color: red"></i>
+            <a class="links"  class="links" href="/kanbas/Courses/Home/">Courses</a>
+          </li>
+          <li class="list-group-item">
+            <i class="fas fa-stack fa-calendar-alt" style="color:red"></i>
+            <a class="links"  class="links" href="#">Calendar</a>
+          </li>
+          <li class="list-group-item">
+            <i class="fas fa-stack fa-inbox" style="color: red"></i>
+            <a class="links"  class="links" href="#">Inbox</a>
+          </li>
+          <li class="list-group-item">
+            <i class="far fa-stack fa-clock" style="color: red"></i>
+            <a class="links"  class="links" href="#">History</a>
+          </li>
+          <li class="list-group-item">
+            <i class="fas fa-stack fa-tv" style="color:red"></i>
+            <a class="links"  class="links" href="#">Studio</a>
+          </li>
+          <li class="list-group-item">
+            <i class="fas fa-stack fa-sign-out-alt" style="color: red"></i>
+            <a class="links"  class="links" href="#">Commons</a>
+          </li>
+          <li class="list-group-item">
+            <div>
+              <i class="fas  fa-question-circle" style="color:red"></i>
+            </div>
+            <div>
+              <a class="links"  class="links" href="#">Help</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="kb-flex-col-container justify-content-around">
+        <div class="d-none d-lg-block">
+          <div class="kb-flex-row-container align-items-center pb-4 pt-4 border-bottom ">
+            <i class="fa fa-bars ms-4 me-4" aria-hidden="true"></i>
+            Jose Annunziato's Profile
+          </div>
+        </div>
+        <div class="kb-flex-row-container ">
+          <div class="kb-width-190px pt-4  d-none d-lg-block">
+            <div class="kb-flex-col-container">
+              <ul class="profile_nav list-group">
+                <li class="list-group-item">
+                  <a class="links"  href="#">Notifications</a>
+                </li>
+                <li class="list-group-item active">
+                  <a class="links"  href="/kanbas/Profile/index.html">Profile</a>
+                </li>
+                <li class="list-group-item">
+                  <a class="links"  href="#">Files</a>
+                </li>
+                <li class="list-group-item">
+                  <a class="links"  href="#">Settings</a>
+                </li>
+                <li class="list-group-item">
+                  <a class="links"  href="#">ePortfolios</a>
+                </li>
+                <li class="list-group-item">
+                  <a class="links"  href="#">Shared Content</a>
+                </li>
+                <li class="list-group-item">
+                  <a class="links"  href="#">The Hub</a>
+                </li>
+                <li class="list-group-item">
+                  <a class="links"  href="#">Quickly Course Tools</a>
+                </li>
+                <li class="list-group-item">
+                  <a class="links"  href="#">Global Announcements</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="kb-flex-col-container p-4">
+
+            <div class="kb-flex-row-container">
+              <div class="kb-flex-col-container ms-2 me-2">
+                <div class="row">
+                  <div class="col"><i class="fa fa-user fa-5x"></i>
+                  </div>
+                  <div class="col">
+                    <form action="/kanbas/Profile/index.html">
+                      <button class="btn btn-light"><i class="mr-5 fas fa-pencil-alt "></i>Cancel Editing</button>
+                    </form>
+                  </div>
+                </div>
+
+                <div class="container">
+                  <div class="col">
+                    <div class="mb-3">
+                      <label for="nameid" class="label">Name:</label>
+                      <input type="email" class="input" id="nameid"
+                        placeholder="Jose Annunziato">
+                    </div>
+                    <div class="row">
+                      <label for="pronouns">Pronouns:</label>
+                      <div class="row">
+                        <select id="pronouns" name="pronouns">
+                          <option value="None">None</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="titleid" class="label">Title:</label>
+                      <textarea class="input" id="titleid" rows="3"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <h2>Contact</h2>
+                <p>No registered services, you can add some on the <a class="links"  href="#">settings</a> page.</p>
+                <div class="mb-3">
+                  <label for="bioText" class="form-label">Biography:</label>
+                  <textarea class="form-control" id="bioText"
+                    rows="3">aculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+                </div>
+                <h2>Links</h2>
+
+                <div>
+                  <div class="row MS-1">
+                    <div class="col">
+                      <div class="row">
+                        Title
+                        <input type="text" value="YouTube" />
+                        <button class="btn-secondary">Add Another Link</button>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="row">
+                        URL
+                        <input type="text" value="www.youtube.com" />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="row">
+                        <a class="links"  href="#">Remove</a>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <div class="col">
+                    <div class="row ">
+                      <form action="/kanbas/Profile/index.html">
+
+                        <button class="btn btn-light">Cancel</button>
+                        <button class="btn btn-danger">Save Profile</button><br />
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
