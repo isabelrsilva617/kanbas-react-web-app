@@ -1,0 +1,37 @@
+a.links {
+  text-decoration: none;
+  color: red;
+}
+
+.kb-flex-row-container {
+  display: flex;
+  flex-direction: row;
+  width: inherit;
+  flex-grow: 1;
+}
+
+.kb-flex-col-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.kb-width-85px {
+  width: 85px;
+  background-color: black;
+}
+.kb-width-190px {
+  width: 190px;
+}
+
+.kb-width-280px {
+  width: 280px;
+}
+.title-text {
+  color: white;
+}
+.button-container {
+  display: flex;
+  justify-content: end;
+}
