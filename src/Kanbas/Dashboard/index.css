@@ -1,0 +1,23 @@
+.card {
+    margin: 15px;
+    width: 260px;
+    align-items: center;
+
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card-body {
+    align-items: center;
+}
+
+.course-buttons {
+    align-items: center;
+}
+.row.input { 
+    justify-content: space-between;
+    margin-left: 45px;
+    margin-top: 15px;
+}

@@ -9,13 +9,13 @@ function Home() {
         </div>
 
         <div className="kb-flex-col-container kb-width-280px">
-          <button type="button" class="btn btn-secondary m-1">
+          <button type="button" className="btn btn-secondary m-1">
             Import Existing Content
           </button>
-          <button type="button" class="btn btn-secondary m-1">
+          <button type="button" className="btn btn-secondary m-1">
             Import From Commons
           </button>
-          <button type="button" class="btn btn-secondary m-1">
+          <button type="button" className="btn btn-secondary m-1">
             Choose Homepage
           </button>
         </div>

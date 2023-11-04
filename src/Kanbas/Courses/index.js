@@ -14,15 +14,16 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 
-function Courses() {
+function Courses({ courses }) {
   const { courseId } = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
+  const course = courses.find((course) => course._id === courseId);
   const pathName = useLocation();
   console.log(pathName);
   return (
     <>
       <div className="kb-flex-col-container">
-        <div className="kb-flex-row-container flex align-items-center pb-4 pt-4 border-bottom ">
+        <div className="row d-flex align-items-center pb-4 pt-4 border-bottom ">
+          <div className="col d-flex">
           <FaBars className="ms-4" aria-hidden="true" />
           <nav
             className="ms-4"
@@ -40,7 +41,9 @@ function Courses() {
               </li>
             </ol>
           </nav>
+          </div>
         </div>
+
         <div className="kb-flex-col-container">
           <div className="kb-flex-row-container">
             <CourseNavigation />
