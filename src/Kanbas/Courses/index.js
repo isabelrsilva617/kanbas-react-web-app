@@ -1,5 +1,7 @@
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 import { FaBars } from "react-icons/fa";
-import db from "../../Kanbas/Database";
 import {
   Navigate,
   Route,
@@ -14,10 +16,22 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 
-function Courses({ courses }) {
+function Courses() {
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  const URL = "http://localhost:4000/api/courses";
+
+  const [course, setCourse] = useState({});
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(
+      `${URL}/${courseId}`
+    );
+    setCourse(response.data);
+  };
   const pathName = useLocation();
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
   console.log(pathName);
   return (
     <>

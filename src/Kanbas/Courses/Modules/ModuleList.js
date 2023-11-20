@@ -1,11 +1,38 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import db from "../../Database";
 import { useSelector, useDispatch } from "react-redux";
-import { addModule, deleteModule, updateModule, setModule } from "./modulesReducer";
+import {
+  addModule,
+  deleteModule,
+  updateModule,
+  setModule,
+  setModules,
+} from "./modulesReducer";
+import * as client from "./client";
 
 function ModuleList() {
   const { courseId } = useParams();
+  useEffect(() => {
+    client.findModulesForCourse(courseId).then((modules) =>
+      dispatch(setModules(modules))
+    );
+  }, [courseId]);
+  const handleAddModule = () => {
+    client.createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
@@ -31,10 +58,18 @@ function ModuleList() {
                       <p>{module.id}</p>
                     </div>
                     <div className="col d-flex  justify-content-end align-items-center flex-grow-0">
-                      <button type="button" className="btn btn-danger" onClick={() => dispatch(deleteModule(module._id))}>
+                      <button
+                        type="button"
+                        className="btn btn-danger"
+                        onClick={() => handleDeleteModule(module._id)}
+                        >
                         Delete
                       </button>
-                      <button type="button" className="btn btn-success" onClick={() => dispatch(setModule(module))}>
+                      <button
+                        type="button"
+                        className="btn btn-success"
+                        onClick={() => dispatch(setModule(module))}
+                      >
                         Edit
                       </button>
                     </div>
@@ -49,35 +84,35 @@ function ModuleList() {
           className="form-control"
           value={module.name}
           onChange={(e) =>
-            dispatch(setModule({...module, name: e.target.value}))
+            dispatch(setModule({ ...module, name: e.target.value }))
           }
         />
         <textarea
           className="form-control mt-1"
           value={module.description}
           onChange={(e) =>
-            dispatch(setModule({...module, description: e.target.value}))
+            dispatch(setModule({ ...module, description: e.target.value }))
           }
         />
         <div className="d-flex mt-1">
-        <button
-          type="button"
-          className="btn btn-success  flex-grow-1"
-          onClick={() => {
-            dispatch(addModule({...module, course: courseId}));
-          }}
-        >
-          Add
-        </button>
-        <button
-          type="button"
-          className="btn btn-primary  flex-grow-1 ms-1"
-          onClick={() => {
-            dispatch(updateModule(module));
-          }}
-        >
-          Update
-        </button>
+          <button
+            type="button"
+            className="btn btn-success  flex-grow-1"
+            onClick={
+              handleAddModule
+            }
+          >
+            Add
+          </button>
+          <button
+            type="button"
+            className="btn btn-primary  flex-grow-1 ms-1"
+            onClick={() => {
+              dispatch(updateModule(module));
+            }}
+          >
+            Update
+          </button>
         </div>
       </ul>
     </>
